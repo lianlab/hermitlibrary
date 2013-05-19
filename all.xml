@@ -1,0 +1,51 @@
+<project default="all">
+  <property name="test-dir" location="test" />
+  <property name="test-reports" location="reports" />
+  <path id="classpath.base">
+  </path>
+  <path id="classpath.test">
+    <pathelement location="lib/junit.jar" />
+	<pathelement location="lib/HermitLibrary.jar" />
+    <pathelement location="${test-dir}" />
+    <path refid="classpath.base" />
+  </path>
+
+  <target name="compile-test">
+    <javac srcdir="${test-dir}"
+           verbose="true"
+           >
+      <classpath refid="classpath.test"/>
+    </javac>
+  </target>
+  <target name="clean-compile-test">
+    <delete verbose="true">
+      <fileset dir="${test-dir}" includes="**/*.class" />
+    </delete>
+  </target>
+
+  <target name="test" depends="compile-test">
+    <junit>
+      <classpath refid="classpath.test" />
+      <formatter type="brief" usefile="false" />
+      <test name="TestDateTime" />
+    </junit>
+  </target>
+
+  <target name="unittest" description="Execute unit tests"
+          depends="compile-test">
+	<junit printsummary="yes" haltonfailure="yes" showoutput="yes" > 
+      <classpath refid="classpath.test" />
+      <formatter type="brief" usefile="false" />
+       <batchtest fork="yes" todir="${reports}/raw/"> 
+                <formatter type="xml"/> 
+                <fileset dir="${src}"> 
+                        <include name="**/*Test*.java"/> 
+                </fileset> 
+        </batchtest> 
+	</junit> 
+  </target>
+
+  <target name="all" depends="test" />
+  <target name="clean" depends="clean-compile-test" />
+</project>
+

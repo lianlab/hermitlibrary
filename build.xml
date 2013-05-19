@@ -1,0 +1,80 @@
+<project name="HermitLibrary" default="test" basedir=".">
+
+  <!--++++++++++ Properties ++++++++++-->
+  <property name="src-main" location="src"/>
+  <property name="src-test" location="test"/>
+  <property name="target"  location="bin"/>
+  <property name="target-classes"  location="bin"/>
+  <property name="target-test-classes"  location="bin/tests"/>
+  <property name="target-test-reports"  location="test-reports"/>
+
+  <path id="test.extlibs.class.path">
+    <fileset dir="lib">
+      <include name="**/*.jar" />
+    </fileset>
+  </path>
+
+  <!--++++++++++ Targets ++++++++++-->
+  <target name="init" description ="Creates the target folders">
+    <mkdir dir="${target-classes}"/>
+    <mkdir dir="${target-test-classes}"/>
+    <mkdir dir="${target-test-reports}"/>
+  </target>
+
+  <target name="clean" description="Removes the target folders" >
+    <delete includeEmptyDirs="true" failonerror="false" verbose="true" >
+        <fileset dir="${target}" defaultexcludes="false"/>
+    </delete>
+  </target>
+
+  <target name="compile-main" depends="init" description="Compiles the main source" >
+    <javac debug="true"
+           srcdir="${src-main}"
+           destdir="${target-classes}"
+           includeantruntime="false">
+    </javac>
+  </target>
+
+  <target name="compile-test" depends="compile-main" description="Compiles the test source" >
+    <javac  debug="true"
+            debugLevel="source"
+            srcdir="${src-test}"
+            destdir="${target-test-classes}"
+            includeantruntime="true">
+      <classpath>
+        <pathelement location="${target-classes}"/>
+        <path refid="test.extlibs.class.path" />
+      </classpath>
+    </javac>
+  </target>
+
+<target name="test" depends="compile-test" description="Runs the tests">
+    <echo>Running the junit tests...</echo>
+    <junit printsummary="yes" haltonfailure="true" showoutput="true" >
+      <classpath>
+        <pathelement location="${src-main}"/>
+        <pathelement location="${target-classes}"/>
+        <pathelement location="${target-test-classes}"/>
+        <path refid="test.extlibs.class.path" />
+      </classpath>
+
+    <batchtest fork="yes" todir="${target-test-reports}" >
+        <fileset dir="${src-test}">
+          <include name="**/*Test*.java"/>
+        </fileset>
+        <formatter type="xml"/>
+        <formatter type="plain" usefile="false" />
+      </batchtest>
+      </junit>
+  </target>
+
+  <target name="package" depends="test" description="Packages the main classes into a jar" >
+    <buildnumber />
+    <jar jarfile="${target}/library.jar" basedir="${target-classes}"/>
+  </target>
+
+    <!-- USAGE: ant deploy-app -->
+    <target name="deploy-lib" depends="package">
+    </target>
+</project>
+
