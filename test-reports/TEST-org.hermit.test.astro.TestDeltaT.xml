@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="MacAirHeWu.local" name="org.hermit.test.astro.TestDeltaT" tests="1" time="0.048" timestamp="2013-05-19T02:45:31">
+<testsuite errors="0" failures="0" hostname="MacAirHeWu.local" name="org.hermit.test.astro.TestDeltaT" tests="1" time="0.048" timestamp="2013-05-19T02:48:19">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
@@ -51,7 +51,7 @@
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="gopherProxySet" value="false" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.hermit.test.astro.TestDeltaT filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/test-reports/TEST-org.hermit.test.astro.TestDeltaT.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/junitvmwatcher2641820196168848774.properties propsfile=/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/junit5242603364331202189.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.hermit.test.astro.TestDeltaT filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/test-reports/TEST-org.hermit.test.astro.TestDeltaT.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/junitvmwatcher2564022345786876082.properties propsfile=/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/junit5103666293767248477.properties" />
     <property name="java.class.path" value="/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/src:/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/bin:/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/bin/tests:/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/lib/HermitLibrary.jar:/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/lib/junit.jar:/usr/share/java/ant-1.8.2/lib/ant-launcher.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on June 16 2012" />
     <property name="target-test-classes" value="/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/bin/tests" />

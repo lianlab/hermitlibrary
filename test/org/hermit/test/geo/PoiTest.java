@@ -22,12 +22,13 @@ package org.hermit.test.geo;
 
 import org.hermit.geo.PointOfInterest;
 import org.hermit.geo.Position;
-
+import junit.framework.Assert;
+import junit.framework.TestCase;
 
 /**
  * Test the PointOfInterest utils.
  */
-public class PoiTest {
+public class PoiTest extends TestCase {
 
     // ******************************************************************** //
     // Main.
@@ -111,6 +112,10 @@ public class PoiTest {
 	// Table of test latitudes.
 	private static final double[][] POINTS = {
 		{ -Math.toRadians(47d + 9d/60d), -Math.toRadians(126d + 43d/60d) },
+	};
+
+	public void testPoi() {
+		main(null);
 	};
 
 }
