@@ -3,6 +3,7 @@
 <project name="HermitLibrary" default="coverage" basedir=".">
 
 	<property file="build.properties" />
+    <property name="findbugs.home" value="tools/findbugs" />
 
 	<path id="cobertura.classpath">
 		<fileset dir="${cobertura.dir}">
@@ -12,9 +13,16 @@
 		</fileset>
 	</path>
 
+	<path id="findbugs.classpath">
+		<fileset dir="${findbugs.home}/lib">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
 	<taskdef classpathref="cobertura.classpath" resource="tasks.properties"/>
 	<taskdef resource="checkstyletask.properties"
 		classpath="lib/checkstyle-5.7.jar" classpathref="cobertura.classpath"/>
+	<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" classpathref="findbugs.classpath" /> 
 
 	
 	<target name="checkstyle">
@@ -23,6 +31,15 @@
     		<formatter type="plain"/>
     		<formatter type="xml"/>
   		</checkstyle>
+	</target>
+
+
+	<target name="findbugs" depends="compile">
+		<findbugs home="${findbugs.home}" output="xml" outputFile="test-reports/findbugs/findbugs-report.xml">
+   	 		<class location="${classes.dir}" />
+    		<auxClasspath refId="dependency.classpath" />
+    		<sourcePath path="src" />
+  		</findbugs>
 	</target>
 
 	<target name="init">
