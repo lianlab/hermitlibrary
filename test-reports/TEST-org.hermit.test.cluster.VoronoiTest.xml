@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="MacAirHeWu.local" name="org.hermit.test.cluster.VoronoiTest" tests="1" time="0.05" timestamp="2013-05-19T02:27:40">
+<testsuite errors="0" failures="1" hostname="MacAirHeWu.local" name="org.hermit.test.cluster.VoronoiTest" tests="1" time="0.048" timestamp="2013-05-19T02:36:39">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
@@ -51,7 +51,7 @@
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="gopherProxySet" value="false" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.hermit.test.cluster.VoronoiTest filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/test-reports/TEST-org.hermit.test.cluster.VoronoiTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/junitvmwatcher3285110706556346462.properties propsfile=/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/junit5139861952587023684.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.hermit.test.cluster.VoronoiTest filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/test-reports/TEST-org.hermit.test.cluster.VoronoiTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/junitvmwatcher293860888483482528.properties propsfile=/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/junit8692194901841514932.properties" />
     <property name="java.class.path" value="/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/src:/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/bin:/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/bin/tests:/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/lib/HermitLibrary.jar:/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/lib/junit.jar:/usr/share/java/ant-1.8.2/lib/ant-launcher.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on June 16 2012" />
     <property name="target-test-classes" value="/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/bin/tests" />
@@ -77,7 +77,9 @@
     <property name="ant.project.invoked-targets" value="test" />
   </properties>
   <testcase classname="junit.framework.TestSuite$1" name="warning" time="0.005">
-    <failure message="No tests found in org.hermit.test.cluster.VoronoiTest" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: No tests found in org.hermit.test.cluster.VoronoiTest
+    <failure message="Cannot instantiate test case: testBase (java.lang.InstantiationException&#xa;&#x9;at sun.reflect.InstantiationExceptionConstructorAccessorImpl.newInstance(InstantiationExceptionConstructorAccessorImpl.java:48)&#xa;&#x9;at java.lang.reflect.Constructor.newInstance(Constructor.java:525)&#xa;&#x9;at junit.framework.TestSuite.createTest(TestSuite.java:61)&#xa;&#x9;at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#xa;&#x9;at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:484)&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1052)&#xa;&#x9;at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)&#xa;)" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Cannot instantiate test case: testBase (java.lang.InstantiationException
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+)
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>

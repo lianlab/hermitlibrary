@@ -22,7 +22,7 @@ import org.hermit.geometry.Point;
  * http://people.sc.fsu.edu/~burkardt/c_src/sweep2/sweep2.html
  */
 public class DiamondTest
-    extends VoronoiTest
+    extends Voronoi
 {
 
     // Input sites.

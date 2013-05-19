@@ -25,7 +25,7 @@ import org.hermit.geometry.voronoi.Fortune;
 /**
  * Base class for tests of Voronoi diagram generation.
  */
-public abstract class VoronoiTest
+public abstract class Voronoi
     extends TestCase
 {
 
@@ -95,6 +95,5 @@ public abstract class VoronoiTest
             if (refEdges[i].compareTo(vEdges[i]) != 0)
                 Assert.fail("edge " + i + ": expected " + refEdges[i] + "; got " + vEdges[i]);
     }
-
 }
 

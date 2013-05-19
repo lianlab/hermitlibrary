@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="MacAirHeWu.local" name="org.hermit.test.cluster.BigVoronoiTest" tests="1" time="0.089" timestamp="2013-05-19T02:41:09">
+<testsuite errors="1" failures="0" hostname="MacAirHeWu.local" name="org.hermit.test.dsp.PowerTest" tests="1" time="0.056" timestamp="2013-05-19T02:41:11">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
@@ -51,7 +51,7 @@
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="gopherProxySet" value="false" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.hermit.test.cluster.BigVoronoiTest filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/test-reports/TEST-org.hermit.test.cluster.BigVoronoiTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/junitvmwatcher3466988134425996157.properties propsfile=/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/junit5206212494526687336.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.hermit.test.dsp.PowerTest filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/test-reports/TEST-org.hermit.test.dsp.PowerTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/junitvmwatcher5645366781891959898.properties propsfile=/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/junit8216077771467997053.properties" />
     <property name="java.class.path" value="/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/src:/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/bin:/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/bin/tests:/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/lib/HermitLibrary.jar:/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/lib/junit.jar:/usr/share/java/ant-1.8.2/lib/ant-launcher.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on June 16 2012" />
     <property name="target-test-classes" value="/Users/wuhe/Public/jenkins/moonblink/HermitLibrary.git/bin/tests" />
@@ -76,7 +76,11 @@
     <property name="java.specification.version" value="1.7" />
     <property name="ant.project.invoked-targets" value="test" />
   </properties>
-  <testcase classname="org.hermit.test.cluster.BigVoronoiTest" name="testBig" time="0.043" />
+  <testcase classname="org.hermit.test.dsp.PowerTest" name="initializationError" time="0.007">
+    <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+</error>
+  </testcase>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
