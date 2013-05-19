@@ -22,12 +22,14 @@ package org.hermit.test.dsp;
 
 import org.hermit.dsp.FFTTransformer;
 import org.hermit.dsp.SignalPower;
-
+import junit.framework.Assert;
+import junit.framework.TestCase;
 
 /**
  * Test the signal power calculations.
  */
-public class PowerTest {
+public class PowerTest  
+	extends TestCase {
 
     // ******************************************************************** //
     // Signal generation.
@@ -166,7 +168,10 @@ public class PowerTest {
         runFftAll(16000, 2000, 512);
 	}
 	
-	
+
+	public void testPower() {
+		main(null);
+	}	
     // ******************************************************************** //
     // Private Constants.
     // ******************************************************************** //
