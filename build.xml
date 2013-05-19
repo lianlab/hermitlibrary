@@ -13,6 +13,17 @@
 	</path>
 
 	<taskdef classpathref="cobertura.classpath" resource="tasks.properties"/>
+	<taskdef resource="checkstyletask.properties"
+		classpath="lib/checkstyle-5.7.jar" classpathref="cobertura.classpath"/>
+
+	
+	<target name="checkstyle">
+ 		<checkstyle config="config/checkstyle-rules.xml">
+    		<fileset dir="src" includes="**/*.java"/>
+    		<formatter type="plain"/>
+    		<formatter type="xml"/>
+  		</checkstyle>
+	</target>
 
 	<target name="init">
 		<mkdir dir="${classes.dir}" />
