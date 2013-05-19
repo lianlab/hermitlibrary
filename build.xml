@@ -25,11 +25,10 @@
 	<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" classpathref="findbugs.classpath" /> 
 
 	
-	<target name="checkstyle">
+	<target name="checkstyle" depends="compile">
  		<checkstyle config="config/checkstyle-rules.xml">
     		<fileset dir="src" includes="**/*.java"/>
-    		<formatter type="plain"/>
-    		<formatter type="xml"/>
+			<formatter type="xml" toFile="test-reports/checkstyle_errors.xml"/>
   		</checkstyle>
 	</target>
 
