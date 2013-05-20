@@ -26,6 +26,7 @@
 
 	
 	<target name="checkstyle" depends="compile">
+		<mkdir dir="test-reports/checkstyle-xml" />
  		<checkstyle config="config/custom-checkstyle.xml">
     		<fileset dir="src" includes="**/*.java"/>
 			<formatter type="xml" toFile="test-reports/checkstyle-xml/checkstyle-result.xml"/>
