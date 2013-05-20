@@ -35,7 +35,8 @@
 
 
 	<target name="findbugs" depends="compile">
-		<findbugs home="${findbugs.home}" output="xml" outputFile="test-reports/findbugs/findbugs-report.xml">
+		<mkdir dir="test-reports/findbugs-xml" />
+		<findbugs home="${findbugs.home}" output="xml" outputFile="test-reports/findbugs-xml/findbugs-report.xml">
    	 		<class location="${classes.dir}" />
     		<auxClasspath refId="dependency.classpath" />
     		<sourcePath path="src" />
