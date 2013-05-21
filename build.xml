@@ -61,7 +61,13 @@
 		</javac>
 	</target>
 
-	<target name="compile-test" depends="compile">
+  	<target name="package" depends="compile" 
+			description="Packages the main classes into a jar" >
+    	<buildnumber />
+    	<jar jarfile="lib/HermitLibrary.jar" basedir="${classes.dir}"/>
+  	</target>
+
+	<target name="compile-test" depends="package">
 		<javac srcdir="${test.dir}" destdir="${testclasses.dir}" debug="yes"
 			includeantruntime="true">
 			<classpath refid="cobertura.classpath" />
